@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
   root: true,
   env: { node: true },
@@ -8,7 +9,7 @@ module.exports = {
   plugins: ["import"],
   rules: {
     // @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    "import/extensions": ["error", { vue: "always" }],
+    "import/extensions": ["error", "always"],
   },
   settings: {
     "import/resolver": {
@@ -16,14 +17,24 @@ module.exports = {
        * Putting a property into import/resolver object appends 'eslint-import-resolver-' to property name
        * @see https://github.com/johvin/eslint-import-resolver-alias/blob/master/README.md
        */
-      alias: {
-        map: [
-          ["@", "./src"], //default Vue `@` alias that exists even if `vue.config.js` is not present
-          //... add your own aliases here, make sure they're in vue.config.js / webpack config file
-        ],
-        extensions: [".vue", ".json", ".js"],
-      },
-    },
+      // stop using alias for now
+      // alias: {
+      //   map: [
+      //     ["@", "./src/"], //default Vue `@` alias that exists even if `vue.config.js` is not present
+      //     //... add your own aliases here, make sure they're in vue.config.js / webpack config file
+      //   ],
+      //   extensions: [".vue", ".json", ".js"],
+      // },
+      webpack: {
+        config: {
+          resolve: {
+            alias: {
+              '@': path.resolve(__dirname, './src')
+            }
+          }
+        }
+      }
+    }
   },
 };
 
