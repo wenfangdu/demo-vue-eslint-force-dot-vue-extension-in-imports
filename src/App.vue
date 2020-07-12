@@ -13,13 +13,13 @@
 /** WITHOUT WEBPACK ALIAS*/
 
 //this should throw eslint error
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from './components/HelloWorld.vue';
 //this should not
 import HelloWorldCopy3 from './components/HelloWorldWithExtension.vue';
 
 /** WITH WEBPACK ALIAS */
 //this should throw eslint error
-import HelloWorldCopy from '@/components/HelloWorldWebpackAliasNoExtension'
+import HelloWorldCopy from '@/components/HelloWorldWebpackAliasNoExtension.vue'
 //this should not
 import HelloWorldCopy2 from '@/components/HelloWorldWebpackAliasWithExtension.vue'
 
@@ -27,9 +27,9 @@ import HelloWorldCopy2 from '@/components/HelloWorldWebpackAliasWithExtension.vu
 //this should not throw
 import Vue from "vue"
 //this should not throw (.json file)
-import json from './somefile';
+import json from './somefile.json';
 //this should not throw (.js file)
-import miscfile from './miscfile';
+import miscfile from './miscfile.js';
 
 export default {
   name: 'App',
