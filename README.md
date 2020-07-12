@@ -15,7 +15,7 @@ Do this:
   npm install --save-dev eslint-plugin-import eslint-import-resolver-alias
   ```
 
-2. Add the following to your `.eslintrc.js`/`.eslintrc.json`/`eslintConfig in package.json`/`.eslintrc.yml`
+2. Add the following to your eslint config file (`.eslintrc.js`/`.eslintrc.json`/`eslintConfig in package.json`/`.eslintrc.yml`)
 ```js
 // I'm using .eslintrc.js
 module.exports = {
