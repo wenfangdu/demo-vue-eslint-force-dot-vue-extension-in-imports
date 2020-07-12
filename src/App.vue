@@ -1,16 +1,35 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld />
+    <HelloWorldCopy3/>
+    
     <HelloWorldCopy/>
     <HelloWorldCopy2/>
   </div>
 </template>
 
 <script>
+/** WITHOUT WEBPACK ALIAS*/
+
+//this should throw eslint error
 import HelloWorld from './components/HelloWorld';
+//this should not
+import HelloWorldCopy3 from './components/HelloWorldWithExtension.vue';
+
+/** WITH WEBPACK ALIAS */
+//this should throw eslint error
 import HelloWorldCopy from '@/components/HelloWorldWebpackAliasNoExtension'
-import HelloWorldCopy2 from '@/components/HelloWorldWebpackAliasWithExtension'
+//this should not
+import HelloWorldCopy2 from '@/components/HelloWorldWebpackAliasWithExtension.vue'
+
+/** MISC */
+//this should not throw
+import Vue from "vue"
+//this should not throw (.json file)
+import json from './somefile';
+//this should not throw (.js file)
+import miscfile from './miscfile';
 
 export default {
   name: 'App',
@@ -18,8 +37,13 @@ export default {
     HelloWorld,
     HelloWorldCopy,
     HelloWorldCopy2,
+    HelloWorldCopy3,
   }
 }
+//to silence "blah blah module not used" eslint errors which we don't care about here
+Vue
+json
+console.log(miscfile);
 </script>
 
 <style>
