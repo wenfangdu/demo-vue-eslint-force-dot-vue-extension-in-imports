@@ -1,0 +1,11 @@
+// The sole purpose of this file is to let Visual Studio Code know that "@" is an alias to /src so the "Go to definition" feature works.
+{
+  "include": ["./src/**/*", "./tests/**/*"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
