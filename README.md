@@ -37,4 +37,7 @@ module.exports = {
   }
 }
 ```
-There are some random duplicated files in `./src/components` but that's 
+
+## Why would you want to force the .vue extension in imports?
+Because in the VS Code `Vetur` extension, you need to have `.vue` extension in imports in order to `Go to definition` right click option working in template.
+More info: https://stackoverflow.com/q/58671448/10706046
