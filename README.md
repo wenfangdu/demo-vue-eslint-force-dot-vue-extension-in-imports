@@ -1,11 +1,11 @@
 # Vue - Demo how to force `.vue` extension in imports with `eslint` in default `vue-cli` project
 *This is built on top of an empty Vue Cli 4.2.5 project with default config: `vue create yourProjectName --default`*
   ## How do I check if this repo actually forces .vue extension?
-```shell
+```sh
 git clone https://github.com/3nuc/demo-vue-eslint-force-dot-vue-extension-in-imports 
-&& cd demo-vue-eslint-force-dot-vue-extension-in-imports 
-&& npm ci 
-&& npm run lint
+cd demo-vue-eslint-force-dot-vue-extension-in-imports 
+npm ci 
+npm run lint
 ```
 You should get two eslint errors in `App.vue`. The repo intentionally holds code that fails linting to demonstrate that the .vue forcing on imports is working.
 
