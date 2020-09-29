@@ -7,7 +7,7 @@ cd demo-vue-eslint-force-dot-vue-extension-in-imports
 npm ci 
 npm run lint
 ```
-You should get two eslint errors in `App.vue`. The repo intentionally holds code that fails linting to demonstrate that the .vue forcing on imports is working.
+You should get three eslint errors in `App.vue`. The repo intentionally holds code that fails linting to demonstrate that the .vue forcing on imports is working.
 
 ## I have an existing project and I want to add forcing .vue extension in it. What to copy from this repo?
 
