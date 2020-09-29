@@ -15,7 +15,7 @@
     "//": "Only `eslint-plugin-import` and `eslint-import-resolver-alias` are new. The rest are from vue cli default (babel, eslint) template"
   },
   "devDependencies": {
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",

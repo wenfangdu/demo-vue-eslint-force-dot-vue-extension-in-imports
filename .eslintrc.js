@@ -4,7 +4,6 @@ module.exports = {
   extends: ["plugin:vue/essential", "eslint:recommended"],
   parserOptions: { parser: "babel-eslint" },
 
-  
   plugins: ["import"],
   rules: {
     // @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
