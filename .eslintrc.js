@@ -7,22 +7,8 @@ module.exports = {
   plugins: ["import"],
   rules: {
     // @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    "import/extensions": ["error", { vue: "always" }],
-  },
-  settings: {
-    "import/resolver": {
-      /* This is why the npm eslint-import-resolver-alias package is necessary.
-       * Putting a property into import/resolver object appends 'eslint-import-resolver-' to property name
-       * @see https://github.com/johvin/eslint-import-resolver-alias/blob/master/README.md
-       */
-      alias: {
-        map: [
-          ["@", "./src"], //default Vue `@` alias that exists even if `vue.config.js` is not present
-          //... add your own aliases here, make sure they're in vue.config.js / webpack config file
-        ],
-        extensions: [".vue", ".json", ".js"],
-      },
-    },
+    // "import/extensions": ["error", { vue: "always" }],
+    'import/extensions': ['warn', 'ignorePackages'],
   },
 };
 
