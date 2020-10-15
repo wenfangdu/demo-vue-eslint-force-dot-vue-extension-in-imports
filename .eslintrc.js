@@ -7,8 +7,7 @@ module.exports = {
   plugins: ["import"],
   rules: {
     // @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    // "import/extensions": ["error", { vue: "always" }],
-    'import/extensions': ['warn', 'ignorePackages'],
+    'import/extensions': ['warn', 'always'],
   },
 };
 
